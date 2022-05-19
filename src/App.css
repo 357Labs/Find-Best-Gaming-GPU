@@ -1,5 +1,8 @@
 .App {
+  display: flex;
+  align-content: center;
   text-align: center;
+  background-color: #61dafb;
 }
 
 .App-logo {
@@ -7,32 +10,56 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
 .App-link {
-  color: #61dafb;
+  color: red;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.subtitle {
+  background-image: radial-gradient(ellipse, #7b13fc, lime);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-size: 140%;
+  margin-top: 0%;
+  font-weight: light;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+}
+
+h1 {
+  background-image: radial-gradient(circle, #7b13fc, lime);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-size: 250%;
+  margin-bottom: 0px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+p {
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 120%;
+  text-align: left;
+  line-height: 1.5;
+}
+
+
+
+
+
+.sidebar {
+  width: 25%;
+}
+
+.MiddleBar {
+  width: 50%;
+  min-width: 350px;
+}
+
+.title{
+    background-color: white;
+    color: white;
+    border-radius: 10vw;
 }

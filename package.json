@@ -1,5 +1,6 @@
 {
   "name": "mining-gpu",
+  "homepage": "https://artofpc.com/find-best-mining-gpu/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

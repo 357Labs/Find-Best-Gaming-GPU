@@ -63,3 +63,24 @@ p {
     color: white;
     border-radius: 10vw;
 }
+
+.nav{
+  background-color: lime;
+  margin-top: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.homeButton{
+  background-color: lime;
+  border-color: transparent;
+  font-size: 100%;
+  color: #7b13fc;
+  font-weight: bolder;
+}
+
+button:hover{
+  background-color: #7b13fc;
+  color: white;
+}

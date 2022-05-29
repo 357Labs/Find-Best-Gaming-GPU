@@ -8,8 +8,8 @@
     width: 100%;
     font-weight: bold;
     text-align: center;
-    border-style: outset;
-    border-color: white;
+    border-style: solid;
+    border-color: #7b13fc;
     margin: auto;
     margin-bottom: 1%;
 }
@@ -19,7 +19,7 @@
     width: auto;
     max-height: 30%;
     max-width: 30%;
-    border-color: lightskyblue;
+    border-color: #7b13fc;
     border-style: outset;
     margin-top: 2%;
     margin-left: 2%;
@@ -33,7 +33,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-    background-color: lightskyblue;
+    background-color: #61dafb;
 }
 
 .gpuNameDiv {
@@ -56,16 +56,13 @@
 
 
 .gpuPrice {
-    border-color: black;
     font-weight: bolder;
-    color: black;
+    color: #7b13fc;
     font-size: 100%;
     margin: auto;
     margin-top: .5%;
     margin-bottom: .5%;
-    background-color: whitesmoke;
-    border-style: ridge;
-    border-width: .4vw;
+    background-color: lime;
     width: auto;
     text-align: center;
 }
@@ -84,16 +81,18 @@
     height: 80%;
     border-style: ridge;
     border-width: .5vw;
-    border-color: lightskyblue;
-    background-color: rgb(36, 36, 36);
+    border-color: #7b13fc;
+    background-color: black;
 }
 
 .gpuButton {
     color: white;
     font-weight: bolder;
     font-size: 125%;
-    border-radius: 5%;
-    background-color: lightskyblue;
+    border-color: black;
+    border-radius:1%;
+    background-color: #FF9900;
+    margin-top: 1%;
     margin-bottom: 1%;
 }
 
@@ -102,14 +101,14 @@
     margin: auto;
     margin-bottom: 1%;
     color: whitesmoke;
-    background-color: darkblue;
+    background-color: #7b13fc;
 }
 
 a {
-    color: black;;
+    color: black;
 }
 
 a:hover{
-    color: white;
+    color: #FF9900;
 }
 

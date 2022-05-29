@@ -79,8 +79,38 @@ p {
   color: #7b13fc;
   font-weight: bolder;
 }
+.homeButton:hover{
+  background-color: #7b13fc;
+  color: lime;
+}
 
 button:hover{
+  background-color: white;
+  color: white;
+}
+
+label{
+  font-weight: bolder;
   background-color: #7b13fc;
   color: white;
+  font-size: 100%;
+  padding-left: .5%;
+  padding-right: .5%;
+  
+}
+input{
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+.priceLimitInput{
+  width: 8vw;
+}
+.searchInput{
+  width: 16vw;
+}
+
+.flexDiv{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
 }

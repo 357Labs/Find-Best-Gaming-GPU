@@ -1,7 +1,8 @@
 import "./GPU.css"
-import AmazonImage from '../src/buyOnAmazon.png'
+
 
 export function GPU(props) {
+    
     return(
         <div className="GPU">
             <img alt={props.data.name} className="gpuImage" src={props.data.image}/>
@@ -23,7 +24,42 @@ export function GPU(props) {
 
 export function DisplayGPUs(props) {
     const listElements = props.GPUList.map((gpu) =>
-        <GPU key={gpu.asin} data={gpu}></GPU>
+        {
+        /*If maxPrice and searchTerm are both empty return all GPUS*/
+        if (props.maxPrice === "" && props.searchTerm === ""){
+            return <GPU key={gpu.asin} data={gpu}></GPU>
+        }
+        /*If maxPrice is empty but searchTerm isn't*/
+        else if (props.maxPrice === "" && props.searchTerm !== ""){
+            if (gpu.title.toLowerCase().indexOf(props.searchTerm.toLowerCase()) >=0){
+                return <GPU key={gpu.asin} data={gpu}></GPU>
+            }
+            else{
+                return null;
+            }
+        }
+        /*If maxPrice is filled but searchTerm isn't*/
+        else if (props.maxPrice !== "" && props.searchTerm === ""){
+            if (gpu.price < props.maxPrice){
+                return <GPU key={gpu.asin} data={gpu}></GPU>
+            }
+            else{
+                return null;
+            }
+        }
+        /*If maxPrice and searchTerm are both filled*/
+        else if (props.maxPrice !== "" && props.searchTerm !== ""){
+            if (gpu.price < props.maxPrice && gpu.title.toLowerCase().indexOf(props.searchTerm.toLowerCase()) >=0){
+                return <GPU key={gpu.asin} data={gpu}></GPU>
+            }
+            else{
+                return null;
+            }
+        }
+        else{
+            return null;
+        }
+        }
     )
     return(
         <div className="displayGPUs">

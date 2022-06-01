@@ -1,9 +1,12 @@
 .App {
   display: flex;
-  align-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   background-color: #61dafb;
 }
+
 
 .App-logo {
   height: 40vmin;
@@ -26,6 +29,7 @@
   font-weight: light;
   font-family:Georgia, 'Times New Roman', Times, serif;
   text-align: center;
+  padding: 2.5%;
 }
 
 h1 {
@@ -36,6 +40,7 @@ h1 {
   font-size: 250%;
   margin-bottom: 0px;
   font-family:Georgia, 'Times New Roman', Times, serif;
+  padding: 0%;
 }
 
 p {
@@ -50,18 +55,39 @@ p {
 
 
 .sidebar {
-  width: 25%;
+  @media screen and (max-width: 1200px){
+    width: 0px;
+  }
+  @media screen and (min-width: 1201px) {
+    background-color: purple;
+    width: 1000px;
+  }
+}
+
+.paragraphDiv{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 1%;
+  margin-right: 1%;
 }
 
 .MiddleBar {
-  width: 50%;
-  min-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
 }
 
 .title{
     background-color: white;
+    max-width: 600px;
     color: white;
+    padding-left: .75em;
+    padding-right: .75em;
     border-radius: 10vw;
+    margin-top: 1vh;
 }
 
 .nav{
@@ -70,6 +96,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 
 .homeButton{
@@ -113,4 +140,9 @@ input{
   display: flex;
   align-items: center;
   justify-content: space-between;  
+  width: 100%;
+  margin: auto;
+  border-style: solid;
+  border-color: #7b13fc;
+  background-color: #7b13fc;
 }

@@ -10,14 +10,16 @@ function App() {
   const [GPUList, setGPUList] = useState([]);
   const [maxPrice, setMaxPrice] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
-  async function retrieveGPUs() {
-    const response = await fetch('https://artofpctest.com/')
+  async function retrieveGPUs(endpoint) {
+    const response = await fetch('https://artofpctest.com/' + endpoint);
     const data = await response.json();
     setGPUList(data.gpu_list);
   }
-  /*Display all GPUs in React app*/
+  /*Display all GPUs in React app
+  Top 10 first, then the rest*/
   useEffect(() => {
-    retrieveGPUs();
+    retrieveGPUs('first10');
+    retrieveGPUs('');
   }, []);
 
   /*Re-render every time maxPrice filter is updated*/
@@ -49,9 +51,11 @@ function App() {
         <h1 >ETH Mining GPU Efficiency Calculator</h1>
         <p className="subtitle">Find the Most Cost-Efficient GPU based on $/MH/s</p>
       </div>
-      <p>This tool constantly parses through Amazon's graphics card listings to find the best deals on Ethereum mining GPUs. It then sorts through them to find the most cost-efficient graphics cards for mining based on Ethash hashrate and price.</p>
-      <p>With NBMiner's latest patch LHR GPUs can now be fully unlocked, so this tool doesn't discriminate between LHR and Non-LHR models.</p>
-      <p>This app's mining GPU selection is updated four times daily to ensure prices and listings are as up-to-date as possible. Filter by price or model to provide even more relevance for your specific use case.</p>
+      <div className="paragraphDiv">
+        <p>This tool constantly parses through Amazon's graphics card listings to find the best deals on Ethereum mining GPUs. It then sorts through them to find the most cost-efficient graphics cards for mining based on Ethash hashrate and price.</p>
+        <p>With NBMiner's latest patch LHR GPUs can now be fully unlocked, so this tool doesn't discriminate between LHR and Non-LHR models.</p>
+        <p>This app's mining GPU selection is updated four times daily to ensure prices and listings are as up-to-date as possible. Filter by price or model to provide even more relevance for your specific use case.</p>
+      </div>
       <div className="flexDiv">
         <label>Max Price($): <input type="text" onChange={handleChange} className="priceLimitInput"></input></label>
         <label>Search: <input type="text" onChange={handleSearchChange} className="searchInput"></input></label>

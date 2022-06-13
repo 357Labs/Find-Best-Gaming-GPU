@@ -38,9 +38,14 @@ h1 {
   background-clip: text;
   -webkit-background-clip: text;
   font-size: 250%;
-  margin-bottom: 0px;
+  margin-top: 2%;
   font-family:Georgia, 'Times New Roman', Times, serif;
   padding: 0%;
+}
+h2{
+  color: black;
+  font-size: 180%;
+  font-weight: 600;
 }
 
 p {
@@ -130,7 +135,7 @@ input{
   margin-bottom: 1vh;
 }
 .priceLimitInput{
-  width: 8vw;
+  width: 12vw;
 }
 .searchInput{
   width: 16vw;
@@ -145,4 +150,32 @@ input{
   border-style: solid;
   border-color: #7b13fc;
   background-color: #7b13fc;
+}
+
+.radioFlexDiv{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #61dafb;
+}
+
+.radioButton{
+  border-radius: 0px;
+  background-color: #7b13fc;
+  font-weight: 600;
+}
+
+/*Edit Bootstrap .btn-checked.btn-secondary*/
+.btn-check:checked+.btn-secondary{
+  background-color: lime;
+  color: #7b13fc;
+}
+
+.btn-secondary:hover{
+  background-color: white;
+  color: #7b13fc;
+}
+
+.fillerDiv{
+  height: 1000px;
 }

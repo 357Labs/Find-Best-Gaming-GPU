@@ -39,7 +39,6 @@
     font-weight: bolder;
     font-size: 100%;
     margin-top: 5%;
-    margin-left: 1%;
     margin-right: 1%;
     width: 100%;
     text-align: center;
@@ -53,8 +52,6 @@
     color: #7b13fc;
     font-size: 100%;
     margin: auto;
-    margin-top: .5%;
-    margin-bottom: .5%;
     background-color: lime;
     width: auto;
     text-align: center;
@@ -90,18 +87,29 @@
 }
 
 .efficiency {
+    text-align: center;
     font-size: 100%;
     margin: auto;
-    margin-bottom: 1%;
     color: whitesmoke;
     background-color: #7b13fc;
 }
 
-a {
+.gpuButton {
     color: black;
+    padding-left: .1vw;
+    padding-right: .1vw;
+    background-image: url("https://artofpc.com//wp-content/uploads/2022/02/MotherboardRev2-scaled.webp");
+    background-size: cover;
+    background-position: center;
+    background-size: 50%;
 }
 
-a:hover{
-    color: #FF9900;
+.gpuButton:hover{
+    color: lime;
+    background-color: #7b13fc;
+    background-image: none;
 }
 
+a{
+    color: #7b13fc;
+}

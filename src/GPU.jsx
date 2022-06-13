@@ -12,10 +12,11 @@ export function GPU(props) {
                     <p className="gpuName">{props.data.title}</p>
                 </div>
                 <div className="priceAndEfficiency">
-                    <p className="gpuPrice">${props.data.price} | {props.data.hashrate} MH/s</p>
-                    <p className="efficiency">Efficiency: ${props.data.dollar_per_mh}/MH/s</p>
+                    <p className="gpuPrice">${props.data.price}</p>
+                    <p className="efficiency">Avg: {(props.data[`fps_${props.resolution}`])}FPS@{props.resolutionText}</p>
+                    <p className="gpuPrice">Relative: {props.data[`percent_${props.resolution}`]}%</p>
                 </div>
-                <button className="gpuButton"><a href={props.data.url}>Buy on {props.data.location}</a></button>
+                <a href={props.data.url} className="gpuButton">View on {props.data.location}</a>
             </div>
         </div>
         
@@ -27,12 +28,12 @@ export function DisplayGPUs(props) {
         {
         /*If maxPrice and searchTerm are both empty return all GPUS*/
         if (props.maxPrice === "" && props.searchTerm === ""){
-            return <GPU key={gpu.asin} data={gpu}></GPU>
+            return <GPU key={gpu.asin} data={gpu} resolution={props.resolution} resolutionText = {props.resolutionText}></GPU>
         }
         /*If maxPrice is empty but searchTerm isn't*/
         else if (props.maxPrice === "" && props.searchTerm !== ""){
             if (gpu.title.toLowerCase().indexOf(props.searchTerm.toLowerCase()) >=0){
-                return <GPU key={gpu.asin} data={gpu}></GPU>
+                return <GPU key={gpu.asin} data={gpu} resolution={props.resolution} resolutionText = {props.resolutionText}></GPU>
             }
             else{
                 return null;
@@ -41,7 +42,7 @@ export function DisplayGPUs(props) {
         /*If maxPrice is filled but searchTerm isn't*/
         else if (props.maxPrice !== "" && props.searchTerm === ""){
             if (gpu.price < props.maxPrice){
-                return <GPU key={gpu.asin} data={gpu}></GPU>
+                return <GPU key={gpu.asin} data={gpu} resolution={props.resolution} resolutionText = {props.resolutionText}></GPU>
             }
             else{
                 return null;
@@ -50,7 +51,7 @@ export function DisplayGPUs(props) {
         /*If maxPrice and searchTerm are both filled*/
         else if (props.maxPrice !== "" && props.searchTerm !== ""){
             if (gpu.price < props.maxPrice && gpu.title.toLowerCase().indexOf(props.searchTerm.toLowerCase()) >=0){
-                return <GPU key={gpu.asin} data={gpu}></GPU>
+                return <GPU key={gpu.asin} data={gpu} resolution={props.resolution} resolutionText = {props.resolutionText}></GPU>
             }
             else{
                 return null;

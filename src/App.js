@@ -1,5 +1,6 @@
-import 'bootstrap/dist/css/bootstrap.min.css'
+import './custom.scss';
 import {DisplayGPUs} from './GPU.jsx';
+import {TopMenu} from './TopMenu.jsx';
 import {useState, useEffect} from 'react';
 import './App.css';
 import './GPU.css';
@@ -63,18 +64,16 @@ function App() {
     <div className="sidebar">
     </div>
     <div className="MiddleBar">
-      <div className="nav">
-        <a href="https://artofpc.com/"><button className="homeButton">Home</button></a>
-        <a href="https://artofpc.com/search-posts/"><button className="homeButton">Articles</button></a>
-        <a href="https://artofpc.com/category/crypto/"><button className="homeButton">Crypto</button></a>
-        <a href="https://artofpc.com/how-to-build-a-pc-step-by-step/"><button className="homeButton">Build a PC</button></a>
-      </div>
+      <TopMenu></TopMenu>
+    
 
       <div className="title">
         <h1 >Best Gaming Graphics Card Calculator</h1>
         <p className="subtitle">Find the Most Powerful Gaming GPU Within Your Budget</p>
       </div>
       <div className="paragraphDiv">
+        <p><em>ArtofPC may receive compensation for purchases made at participating retailers linked on this site. This compensation does not affect what products or prices are displayed, or the order of prices listed. Thanks for your support!</em></p>
+        <hr></hr>
         <p>This tool constantly parses through Amazon's graphics card listings to find the best deals on gaming GPUs. It then sorts them by gaming performance based on <a href="https://www.tomshardware.com/reviews/gpu-hierarchy,4388.html">Tom's Hardware's GPU Hierarchy</a>.</p>
         <p>Enter the maximum price you're willing to pay to see the best graphics cards you can afford, along with a performance grade (as a percent) which indicates their performance relative to the best possible gaming GPU. For instance, a card with a grade of 75% can be expected to push approximately 3/4 the framerate of the best graphics card (currently the <a href="https://www.amazon.com/PowerColor-Devil-Radeon-Graphics-Memory/dp/B09VYDTVGY?crid=2RPB8MGQ24H5T&keywords=6950+xt&qid=1654110858&sprefix=6950+x%2Caps%2C90&sr=8-1&linkCode=ll1&tag=artofpc0d-20&linkId=00c00cfd0503e5578086203587d9b537&language=en_US&ref_=as_li_ss_tl">Radeon RX 6950 XT</a>)</p>
         <p>Finally, this calculator provides benchmarks from the aforementioned GPU hierarchy that can serve as in-game FPS estimates at four different thresholds: 1080p Medium, 1080p Ultra, 1440p Ultra, and 4K Ultra. Note that FPS can vary widely between games. You can expect higher framerates than those displayed when using the lowest graphical settings, lower resolutions (e.g. 720p), or in performance mode (in games that support this feature). </p>

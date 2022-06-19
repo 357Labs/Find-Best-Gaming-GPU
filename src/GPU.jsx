@@ -51,7 +51,7 @@ export function DisplayGPUs(props) {
         }
         /*If maxPrice and searchTerm are both filled*/
         else if (props.maxPrice !== "" && props.searchTerm !== ""){
-            if (gpu.price < props.maxPrice && gpu.title.toLowerCase().indexOf(props.searchTerm.toLowerCase()) >=0){
+            if (gpu.price <= props.maxPrice && gpu.title.toLowerCase().indexOf(props.searchTerm.toLowerCase()) >=0){
                 return <GPU key={gpu.asin} data={gpu} resolution={props.resolution} resolutionText = {props.resolutionText}></GPU>
             }
             else{

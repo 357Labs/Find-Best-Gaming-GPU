@@ -1,0 +1,11 @@
+/* The following block can be included in a custom.scss */
+
+/* make the customizations */
+$theme-colors: (
+    "primary": lime,
+    "secondary": #7b13fc,
+    "light": white,
+);
+
+/* import bootstrap to set changes */
+@import "~bootstrap/scss/bootstrap";
